@@ -1,0 +1,15 @@
+.layout {
+  display: flex; // disposition horizontale
+  min-height: 100vh; // occuper toute la hauteur
+}
+
+app-sidebar {
+  width: 250px; // largeur fixe ou dynamique
+  flex-shrink: 0; // ne pas réduire si manque de place
+}
+
+.content {
+  flex: 1; // prend le reste de la place
+  padding: 1rem; // optionnel
+  background-color: #f5f5f5; // juste pour voir la différence
+}

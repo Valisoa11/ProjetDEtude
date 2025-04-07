@@ -1,0 +1,21 @@
+<div
+  class="sidenav"
+>
+ 
+
+    <ul class="sidenav-nav">
+      <li *ngFor="let item of items; let i = index" class="sidenav-nav-item">
+        <a
+          class="sidenav-nav-link"
+          [routerLink]="item.routeLink"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          
+        <i class="sidenav-link-icon" [class]="item.icon"></i>
+        <span class="sidenav-link-text">{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+</div>
+
