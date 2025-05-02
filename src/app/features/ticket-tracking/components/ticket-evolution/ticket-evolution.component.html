@@ -1,1 +1,14 @@
-<p>ticket-evolution works!</p>
+<div class="chart-scroll-container">
+  <div class="row align-items-center justify-content-between mb-2">
+    <div class="col-auto">
+      <h1 class="title">Évolution des tickets ouverts et fermés</h1>
+    </div>
+    <div class="col-auto text-end">
+      <p>Ouverts : {{ openCount }} / Fermés : {{ closedCount }} / En cours : {{ inProgressCount }} / TOTAL : {{ totalCount }}</p>
+    </div>
+  </div>
+
+  <div class="chart-wrapper">
+    <canvas #lineCanvas></canvas>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.charts-container {
+    background: #f2f2f2;
+    padding: 10px;
+    max-width: 350px;
+    width: 100%; /* pour être responsive */
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 620px; /* hauteur fixe que tu peux ajuster */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-title {
+    font-size: 20px;  /* Taille de la police du titre */
+    margin-bottom: 10px; /* Espace sous le titre */
+    text-align: center; /* Centre le texte */
+    width: 100%; /* S'assure que le titre occupe toute la largeur */
+}
+
+.chart-wrapper {
+    width: 80%;  /* Ajuster la largeur à 90% pour éviter le débordement */
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    margin-top: 20px;
+    max-width: 300px; /* Limiter la largeur maximale si nécessaire */
+}
+
+.chart-wrapper:first-child {
+    margin-top: 0; /* Pas de marge pour le premier */
+}
+
+canvas {
+    width: 100% !important; /* canvas prend toute la largeur disponible à l'intérieur de son wrapper */
+    height: 160px !important; /* Définir une hauteur spécifique pour éviter le débordement */
+    object-fit: contain; /* Maintient le ratio tout en respectant la taille */
+}

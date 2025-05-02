@@ -1,0 +1,22 @@
+.repartition {
+    width: 96%;
+    max-width: 100%;
+    height: 300px;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    margin-top: 15px;
+     // utile si le canvas dépasse en largeur
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    box-sizing: border-box;
+  }
+  
+  canvas {
+        width: 100% !important;
+        max-width: 250px;
+        height: auto !important;  // adapte à la hauteur fixée de .repartition
+  }
+  

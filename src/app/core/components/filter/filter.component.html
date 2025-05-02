@@ -1,1 +1,50 @@
-<p>filter works!</p>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <!-- Calendrier Icone -->
+            <button class="btn btn-outline-secondary" (click)="openCalendar()">
+              <i class="fa fa-calendar"></i>
+            </button>
+          </div>
+      <div class="col-auto">
+        <!-- Champ Mois -->
+        <div class="input-group">
+          <input type="text" class="form-control" [value]="currentMonth" readonly>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="toggleMonthDropdown()">
+              <i class="fa fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Liste déroulante des mois -->
+        <div *ngIf="monthDropdownVisible" class="dropdown-menu show">
+          <button *ngFor="let month of months" class="dropdown-item" (click)="selectMonth(month)">
+            {{ month }}
+          </button>
+        </div>
+      </div>
+  
+      <div class="col-auto">
+        <!-- Champ Année -->
+        <div class="input-group">
+          <input type="text" class="form-control" [value]="currentYear" readonly>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="toggleYearDropdown()">
+              <i class="fa fa-chevron-down"></i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Liste déroulante des années -->
+        <div *ngIf="yearDropdownVisible" class="dropdown-menu show">
+          <button *ngFor="let year of years" class="dropdown-item" (click)="selectYear(year)">
+            {{ year }}
+          </button>
+        </div>
+      </div>
+  
+      
+    </div>
+  </div>
+  

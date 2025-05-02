@@ -1,0 +1,66 @@
+.container {
+  width: 95%;
+  background-color: #f2f2f2; /* Couleur de fond */
+  border-radius: 20px; /* Bordures arrondies */
+  padding: 15px; /* Ajouter du padding autour du contenu */
+  margin: 20px;
+}
+
+.titre {
+  margin-top: 10px;
+  font-size: 18px;
+  
+  font-family: 'sousTitre';
+}
+
+.table-wrapper {
+  max-width: 100%; /* Assure que le tableau prend toute la largeur du conteneur */
+  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+  max-height: 280px; /* Limite la hauteur du tableau */
+  overflow-y: scroll; /* Ajoute un défilement vertical */
+  margin-top: 10px; /* Espacement du haut pour éviter que le tableau ne touche directement le titre */
+  border-radius: 10px; /* Arrondir les coins du wrapper du tableau */
+  background-color: transparent; /* Enlève le fond blanc du tableau */
+  padding: 5px; /* Ajouter un peu de padding */
+}
+
+/* Masquer la barre de défilement (cachée mais fonctionnelle) */
+.table-wrapper::-webkit-scrollbar {
+  display: none; /* Cache la barre de défilement */
+}
+
+/* Applique toujours un défilement si nécessaire, même si la barre est cachée */
+.table-wrapper {
+  -ms-overflow-style: none;  /* Pour les navigateurs IE */
+  scrollbar-width: none; /* Pour Firefox */
+  
+}
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%; /* Rendre le tableau responsive */
+  
+}
+
+.custom-table th,
+.custom-table td {
+  border-left: none !important;
+  border-right: none !important;
+  padding: 6px 12px; /* Ajouter un peu de padding pour le confort */
+  background-color: transparent;
+}
+
+// .custom-table thead tr {
+//   border-bottom: 2px solid #ccc;
+// }
+
+// .custom-table tbody tr {
+//   border-top: 1px solid #dee2e6;
+// }
+
+@media (max-width: 768px) {
+  .custom-table th, 
+  .custom-table td {
+    font-size: 12px; /* Réduire la taille de la police sur des écrans plus petits */
+  }
+}

@@ -1,1 +1,55 @@
-<p>ticket-analysis-table works!</p>
+<div class="container mt-4 custom-container">
+  <h3 class="mb-3 table-title">Tableau des Agents</h3>
+
+  <div class="table-wrapper">
+    <!-- Table pour le thead -->
+    <table class="table table-bordered text-center align-middle table-header">
+      <colgroup>
+        <col style="width: 12%">
+        <col style="width: 6%"><col style="width: 6%">
+        <col style="width: 6%"><col style="width: 6%">
+        <col style="width: 6%"><col style="width: 6%">
+        <col style="width: 12%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th rowspan="2">Agent</th>
+          <th colspan="2">Tickets Faciles</th>
+          <th colspan="2">Tickets Moyens</th>
+          <th colspan="2">Tickets Difficiles</th>
+          <th rowspan="2">Total Points</th>
+        </tr>
+        <tr>
+          <th>Nb</th><th>Pts</th>
+          <th>Nb</th><th>Pts</th>
+          <th>Nb</th><th>Pts</th>
+        </tr>
+      </thead>
+    </table>
+
+    <!-- Table scrollable pour le tbody -->
+    <div class="tbody-scroll">
+      <table class="table table-bordered text-center align-middle table-body">
+        <colgroup>
+          <col style="width: 12%">
+          <col style="width: 6%"><col style="width: 6%">
+          <col style="width: 6%"><col style="width: 6%">
+          <col style="width: 6%"><col style="width: 6%">
+          <col style="width: 12%">
+        </colgroup>
+        <tbody>
+          <tr *ngFor="let agent of agents">
+            <td>{{ agent.nom }}</td>
+            <td>{{ agent.faciles.nb }}</td>
+            <td>{{ agent.faciles.points }}</td>
+            <td>{{ agent.moyens.nb }}</td>
+            <td>{{ agent.moyens.points }}</td>
+            <td>{{ agent.difficiles.nb }}</td>
+            <td>{{ agent.difficiles.points }}</td>
+            <td>{{ agent.totalPoints }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

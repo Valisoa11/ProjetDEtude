@@ -1,1 +1,27 @@
-<p>agent-details-page works!</p>
+<div class="container" *ngIf="agent$ | async as agent">
+  <div class="row align-items-start">
+    <div class="col-1">
+      <i class="fa fa-arrow-left icon" style="cursor: pointer;" (click)="goBack()"></i>
+    </div>
+    <div class="col-6">
+      <h2 class="titre mb-0">À propos de {{ (agent$ | async)?.nomPrenom }}</h2>
+
+    </div>
+    <div class="col-5 filter">
+      <app-filter></app-filter>
+    </div>
+  </div>
+
+  <div class="row align-items-start">
+    <div class="col-4">
+      <app-agent-info [agent]="agent"></app-agent-info>
+      <app-agent-analyse-ticket-table></app-agent-analyse-ticket-table>
+    </div>
+    <div class="col-5">
+      <app-time-analysis></app-time-analysis>
+    </div>
+    <div class="col-3">
+      <app-realisation-rate></app-realisation-rate>
+    </div>
+  </div>
+</div>

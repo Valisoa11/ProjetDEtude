@@ -1,1 +1,25 @@
-<p>forecast-table works!</p>
+<div class="container mt-4 custom-container">
+    
+  <div class="table-wrapper">
+    <table class="table text-center custom-table">
+      <thead>
+        <tr>
+          <th>Mois</th>
+          <th>Faciles</th>
+          <th>Moyens</th>
+          <th>Difficiles</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of tickets">
+          <td>{{ item.mois }}</td>
+          <td>{{ item.facile }}</td>
+          <td>{{ item.moyen }}</td>
+          <td>{{ item.difficile }}</td>
+          <td>{{ item.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

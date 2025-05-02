@@ -1,0 +1,55 @@
+
+
+.title{
+  color: #003148;
+  font-family: 'title';
+  margin-left: 30px;
+}
+.search {
+    width: 25rem;
+    height: 100%;
+    margin: 0 1rem;
+    position: relative;
+    margin-left: 40%;
+  }
+  
+
+  .searchbar {
+    font-size: 1rem;
+    width: 20rem;
+    height: 20px;
+    border: 2px solid #003148;
+    outline: none;
+    border-radius: 20px;
+    padding: 1.3rem;
+    position: relative;
+    transition: all .2s;
+    transition-delay: .1s;
+    margin: 5px;
+  }
+  
+  
+  
+  .icon {
+ font-size: 25px;
+     height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 6rem;
+  transition: all .2s;
+  transition-delay: .1s;
+    color: #003148;
+  }
+  
+ 
+  
+  
+  .searchbar::placeholder {
+    opacity: .5;
+  }
+
+  .notif{
+    font-size: 35px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }

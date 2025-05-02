@@ -1,1 +1,33 @@
-<p>ticket-summary works!</p>
+<div class="card">
+    <h3>À propos des tickets</h3>
+  
+    <div class="doughnut-container">
+      <canvas #doughnutCanvas></canvas>
+      <div class="center-overlay">
+        
+        <div class="icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="center-text">{{ totalDonePercent }}%</div>
+        <small>Tickets réalisés</small>
+      </div>
+    </div>
+  
+    <div class="ticket-levels">
+      <div class="ticket-row" *ngFor="let ticket of ticketData">
+        <span>{{ ticket.label }}</span>
+        <div class="circles">
+          <div
+            class="circle"
+            *ngFor="let isFilled of ticket.filledCircles; let i = index"
+            [ngClass]="{
+              'easy-colored': ticket.label === 'Ticket facile' && i < ticket.count,
+              'medium-colored': ticket.label === 'Ticket moyen' && i < ticket.count,
+              'hard-colored': ticket.label === 'Ticket difficile' && i < ticket.count
+            }"
+          ></div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  

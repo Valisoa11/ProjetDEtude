@@ -1,5 +1,4 @@
 
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from "./core/components/header/header.component";
 import { SidebarComponent } from "./core/components/sidebar/sidebar.component";
 import { RouterModule } from '@angular/router';
@@ -8,7 +7,7 @@ import { Component, HostListener, OnInit, signal, computed } from '@angular/core
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatSlideToggleModule, HeaderComponent, SidebarComponent, RouterModule],
+  imports: [ HeaderComponent, SidebarComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

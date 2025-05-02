@@ -1,1 +1,13 @@
-<p>page-graphe works!</p>
+<div class="wrapper">
+  <div class="btn-container">
+    <button (click)="selectedView = 'vue'" [class.active]="selectedView === 'vue'">Vue d'ensemble des performances</button>
+    <button (click)="selectedView = 'analyse'" [class.active]="selectedView === 'analyse'">Analyse du temps de résolution par agent</button>
+  </div>
+
+  <div class="content-container">
+    <ng-container [ngSwitch]="selectedView">
+      <app-agent-comparaison *ngSwitchCase="'vue'"></app-agent-comparaison>
+      <app-time-resolution-graph *ngSwitchCase="'analyse'"></app-time-resolution-graph>
+    </ng-container>
+  </div>
+</div>

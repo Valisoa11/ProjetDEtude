@@ -1,0 +1,9 @@
+/* Ajustez la hauteur max de la zone de la table selon vos besoins */
+.analysis-table-wrapper {
+    max-height: 400px;   /* Exemple de hauteur maximale */
+    overflow-y: auto;    /* Active le défilement vertical uniquement sur le wrapper */
+    background-color: #fff; /* Optionnel : pour bien distinguer la zone */
+  }
+  
+  /* Vous pouvez ajouter d’autres styles selon votre charte graphique */
+  

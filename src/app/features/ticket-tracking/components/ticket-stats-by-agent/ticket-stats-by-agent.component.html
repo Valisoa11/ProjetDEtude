@@ -1,1 +1,24 @@
-<p>ticket-stats-by-agent works!</p>
+<div class="table-container">
+  <h2 class="table-title">Statistiques des Tickets par Agent</h2>
+    <table class="ticket-table">
+      <thead>
+        <tr>
+          <th>Agent</th>
+          <th>Fermés</th>
+          <th>Ouverts</th>
+          <th>En Cours</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.agent }}</td>
+          <td>{{ ticket.ticketsFermes }}</td>
+          <td>{{ ticket.ticketsOuverts }}</td>
+          <td>{{ ticket.ticketsEnCours }}</td>
+          <td>{{ ticket.totalTickets }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,1 +1,27 @@
-<p>agent-card works!</p>
+<div class="table-wrapper">
+  <table class="table agents-table">
+    <thead>
+      <tr>
+        <th class="w-10">ID</th>
+        <th class="w-30">Nom</th>
+        <th class="w-15">Poste</th>
+        <th class="w-15">Nombre de tickets</th>
+        <th class="w-30">Performance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agent of filteredAgents()" (click)="goToDetails(agent.id)">
+
+        <td class="w-10 deb">{{ agent.id }}</td>
+        <td class="w-30">{{ agent.nom }}</td>
+        <td class="w-15">{{ agent.poste }}</td>
+        <td class="w-15">{{ agent.nombreTickets }}</td>
+        <td class="w-30 fin">
+          <ng-container *ngFor="let star of getStars(agent.performance)">
+            <i class="fa fa-star" [class.filled]="star"></i>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

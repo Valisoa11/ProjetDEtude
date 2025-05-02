@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h4 class="mb-3 titre">Analyse du Temps de Traitement des Tickets </h4>
+  <div class="table-wrapper">
+    <table class="table text-center custom-table">
+      <thead class="fw-bold text-secondary">
+        <tr>
+          <th>ID Ticket</th>
+          <th>Type</th>
+          <th>Temps moyen</th>
+          <th>Temps réel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets">
+          <td>{{ ticket.id }}</td>
+          <td>{{ ticket.type }}</td>
+          <td>{{ ticket.tempsMoyen }}</td>
+          <td>{{ ticket.tempsReel }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

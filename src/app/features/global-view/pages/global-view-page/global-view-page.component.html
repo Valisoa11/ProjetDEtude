@@ -1,1 +1,31 @@
-<p>global-view-page works!</p>
+<div class="container-fluid">
+    <!-- Première ligne : Best Agent et Filter -->
+    <div class="row mb-3">
+      <div class="col-md-7">
+        <app-best-agent></app-best-agent>
+      </div>
+      <div class="col-md-5">
+        <app-filter></app-filter>
+      </div>
+    </div>
+  
+    <!-- Deuxième ligne : Page Graphe et Ticket Summary -->
+    <div class="row ">
+      <div class="col-md-9">
+        <app-page-graphe></app-page-graphe>
+      </div>
+      <div class="col-md-3">
+        <app-ticket-summary></app-ticket-summary>
+      </div>
+    </div>
+  
+    <!-- Troisième ligne : Ticket Analysis Table avec scroll vertical interne -->
+    <div class="row">
+      <div class="col-12">
+        <div class="analysis-table-wrapper">
+          <app-ticket-analysis-table></app-ticket-analysis-table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,44 @@
+
+.container {
+  width: 95%;
+  background-color: #f2f2f2; /* Couleur de fond */
+  border-radius: 20px; /* Bordures arrondies */
+  padding:5px 15px; /* Ajouter du padding autour du contenu */
+  margin: 20px;
+}
+.card {
+  border : none;
+  background-color: transparent;
+}
+
+.performance {
+  margin-top: 1px;
+  position: relative;
+}
+
+.stars {
+  position: absolute; /* Positionnement absolu pour placer les étoiles */
+  right: 10px; /* Ajuste la distance depuis la droite */
+  color: #003148;
+}
+
+.star {
+  font-size: 1.5rem;
+  margin-left: 2px; /* Légère marge entre les étoiles */
+}
+
+.star.filled {
+  color: #003148;
+}
+
+.star:not(.filled) {
+  color: lightgray;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-text {
+  margin-top: 20px;
+}

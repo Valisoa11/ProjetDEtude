@@ -1,0 +1,37 @@
+.table-container {
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin: 20px 0 0 20px;
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 20px;
+    scrollbar-width: none;
+  }
+  .table-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+    font-family: 'sousTitre';
+  }
+  .ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+  }
+  
+  .ticket-table th, .ticket-table td {
+    
+    padding: 8px;
+    text-align: center;
+  }
+  
+
+  
+
+.ticket-table th,
+.ticket-table td {
+  border: none;
+}
+
+  

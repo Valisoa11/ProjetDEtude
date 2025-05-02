@@ -1,0 +1,123 @@
+.card {
+  width: 90%;
+  max-width: 500px;
+  height: 350px;
+  background: #F2F2F2;
+  margin: 0.1rem 1rem;
+  padding: 0.2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: none;
+
+  h3 {
+    
+    font-size: 1rem;
+  }
+
+  .doughnut-container {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    
+    margin: 0 auto;
+  
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  
+    .center-overlay {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+  
+      .icon {
+        font-size: 20px;
+        color: #333;
+      }
+  
+      .center-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 4px;
+      }
+  
+      small {
+        color: #666;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.ticket-levels {
+    margin-top: 2rem;
+
+    .ticket-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .circles {
+        display: flex;
+        gap: 6px;
+
+        .circle {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid #ccc;
+          background-color: white;
+        }
+
+        .easy-colored {
+          background-color: #6BCB77; // Vert
+        }
+
+        .medium-colored {
+          background-color: #03628F; // Bleu
+        }
+
+        .hard-colored {
+          background-color: #FF6B6B; // Rouge
+        }
+      }
+    }
+  }
+
+
+
+.bar-chart-canvas {
+  width: 100% !important;
+  height: 350px !important;
+}
+
+// Media query pour petits écrans
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .ticket-row {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .circles {
+        margin-top: 4px;
+      }
+    }
+  }
+}

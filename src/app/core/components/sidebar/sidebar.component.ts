@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output, input, output } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 
@@ -23,11 +23,11 @@ export class SidebarComponent {
       icon: 'fa-solid fa-ticket',
       label: 'Suivis des tickets',
     },
-    {
-      routeLink: 'details-agent',
-      icon: 'fa-solid fa-address-card',
-      label: 'Details agents',
-    },
+    // {
+    //   routeLink: 'details-agent',
+    //   icon: 'fa-solid fa-address-card',
+    //   label: 'Details agents',
+    // },
     {
       routeLink: 'global-view',
       icon: 'fa-solid fa-chart-simple',

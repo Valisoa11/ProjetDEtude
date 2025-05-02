@@ -1,1 +1,31 @@
-<p>forecast-analysis-page works!</p>
+<div class="container-fluid">
+    <!-- Première ligne : Titre et Filtre -->
+    <div class="row mb-1 align-items-center">
+      <div class="col-12 col-md-7 mb-2 mb-md-0">
+        <h2 class="titre">Productivité des agents</h2>
+      </div>
+      <div class="col-12 col-md-5">
+        <app-filter></app-filter>
+      </div>
+    </div>
+  
+    <!-- Deuxième ligne : Composant productivité -->
+    <div class="row ">
+      <div class="col-12">
+        <div class="analysis-table-wrapper">
+          <app-productivity></app-productivity>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Troisième ligne : Forecast et Périodes -->
+    <div class="row">
+      <div class="col-12 col-md-4 mb-1 mb-md-0">
+        <app-forecast-table></app-forecast-table>
+      </div>
+      <div class="col-12 col-md-8">
+        <app-productivity-periods></app-productivity-periods>
+      </div>
+    </div>
+  </div>
+  
